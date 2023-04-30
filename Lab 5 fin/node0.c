@@ -19,7 +19,7 @@ struct distance_table
 
 /* students to write the following two routines, and maybe some others */
 float clocktime;
-
+//min function had to comment it out for other nodes to compile
 int min(int a, int b, int c) {
     int smallest = a;
     if (b < smallest) {
@@ -48,7 +48,7 @@ void rtinit0()
         dt0.costs[i][j] = 999;
     }
   }
-  //initials
+  //initials we get this from pdf picture change based on which node we are in
   dt0.costs[0][0] = 0;
 	dt0.costs[1][0] = 1;
 	dt0.costs[1][1] = 1;
@@ -64,7 +64,7 @@ void rtinit0()
       pkt.mincost[i] = dt0.costs[i][0];
     }
   }
-  //send to neighbors
+  //send to neighbors also changes based on which node we are in
   pkt.sourceid = 0;
   pkt.destid = 1;
   tolayer2(pkt);
